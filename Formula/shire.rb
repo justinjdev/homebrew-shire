@@ -1,22 +1,22 @@
 class Shire < Formula
   desc "Monorepo package indexer and MCP server"
   homepage "https://github.com/justinjdev/shire"
-  version "0.1.5-beta"
+  version "0.1.6-beta"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-aarch64-apple-darwin.tar.gz"
-      sha256 "3bed746512ed607fb77b76e1c0f89e22751a6aca171ec60e77f8ca7fb62ceb18"
+      sha256 "b49697d8383f0eeccffa713ea26b936dfd691ba19cfbfae15f58e9849c250498"
     elsif Hardware::CPU.intel?
       url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-x86_64-apple-darwin.tar.gz"
-      sha256 "f56bbee69f531ebb5b26b798a961af54414c7ac867954ea1522c47853d6d7448"
+      sha256 "4195c6b99813cc5bdc1d01653f0a9b4ce4fb94a232d38194ed2ba4c37061c6e1"
     end
   end
 
   on_linux do
     url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "69d2d4efbb888372251db9ef6eb8a89ef1f711b7867cb2836902c2e8a38d00a2"
+    sha256 "e88ddefc445dd10779994fced4dcd3ac6423d84b03b5178eb5c6d2af4b41f87e"
   end
 
   def install
