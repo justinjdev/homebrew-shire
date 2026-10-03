@@ -1,26 +1,26 @@
 class Shire < Formula
   desc "Monorepo package indexer and MCP server"
   homepage "https://github.com/justinjdev/shire"
-  version "0.8.0"
+  version "0.8.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-aarch64-apple-darwin.tar.gz"
-      sha256 "d701295b39ff941a90d8af7045ade6a01db2a8766acafce4ca0980ff6894d994"
+      sha256 "98c594ff734181ac1ea107e6b2f489facd95dd101a4417cff8b3c51012d7656a"
     elsif Hardware::CPU.intel?
       url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-x86_64-apple-darwin.tar.gz"
-      sha256 "6800b6206099bcf7a6bb4f78e9ec6517c24604ef79d249f13772c1871871783f"
+      sha256 "d78eec3bfe09a871b8b72aa7f7bb4305fb103c7141870a9ea6b371f395f4e094"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0b4cc3890993f276163d1d3079ea5ab2cbbc83ce714bc2f494982c1c1c7fd87d"
+      sha256 "6182ac9b6eae9ebe8acb68490057abb85afa8326edbc54c6d5c91cbd0066c15f"
     elsif Hardware::CPU.intel?
       url "https://github.com/justinjdev/shire/releases/download/v#{version}/shire-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "640ac0bdc80cc98b5b81be65ecf5330d5da5608bda6719978404c59a9614c1c9"
+      sha256 "6bc660ca4d66408cd2038c830c3f8152d9e280f6d6114e8daaeb6fdfbcf3cbe5"
     end
   end
 
